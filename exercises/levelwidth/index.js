@@ -10,7 +10,24 @@
 // |       |
 // 4       5
 // Answer: [1, 3, 2]
+//WIDTH --- BREADTH FIRST TRAVERSAL
 
-function levelWidth(root) {}
+function levelWidth(root) {
+    const arr = [root, 's'];
+    const counters = [0];
+
+    while (arr.length > 1){     //if something is inside the array
+        const node = arr.shift();       //take the first node
+
+        if (node === 's'){
+            counters.push(0);
+            arr.push('s');
+        } else {
+            arr.push(...node.children);
+            counters[counters.length - 1]++;
+        }
+    }
+    return counters;
+}
 
 module.exports = levelWidth;

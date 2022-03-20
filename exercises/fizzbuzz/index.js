@@ -12,6 +12,18 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) { // how modulo operator works
+    for(let i = 1; i <= n; i++){
+        if (i % 3 === 0 && i % 5 === 0){ // is the number a multiple of 3 and 5
+            console.log("fizzbuzz");
+        } else if (i % 5 === 0){
+            console.log("buzz");
+        } else if (i % 3 === 0){
+            console.log("fizz");
+        } else {
+            console.log(i);
+        }
+    }
+}
 
 module.exports = fizzBuzz;

@@ -9,7 +9,27 @@
 //   s.push(2);
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
+//STACK - FIRST IN LAST OUT
+//push -- add record to stack
+//pop -- remove the top record in the stack
+//peek -- return the top record without popping it 
 
-class Stack {}
+class Stack {
+    constructor(){
+        this.data = [];
+    }
+
+    push(record){
+        this.data.push(record);
+    }
+
+    pop(){
+        return this.data.pop();
+    }
+
+    peek(){
+        return this.data[this.data.length - 1];
+    }
+}
 
 module.exports = Stack;
